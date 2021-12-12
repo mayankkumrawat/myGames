@@ -1,0 +1,217 @@
+*{
+    padding: 0;
+    margin: 0;
+    color: aliceblue;
+    /* background: #000; */
+    overflow: hidden;
+
+}
+
+.hide{
+    display: none;
+}
+
+#startScreen{
+    width: 40%;
+    text-align: center;
+    position: absolute;
+    padding: 20px 2px;
+    top: 10%;
+    left: 30%;
+    z-index: 0;
+    background: url('bg.jpg') no-repeat center center/cover;
+    border: 2px solid white;
+    border-radius: 10px;
+    text-shadow: 2px 2px black;
+    box-shadow:rgb(200, 200, 202) 0px 10px 0px 0px;    
+}
+.startScreenBegin{
+    animation: startScreenBegin 1s ease-in 0s forwards;
+
+}
+
+@keyframes startScreenBegin{
+  from{
+      top: 10%;
+  }
+  to{
+      top: -20%;
+      /* display: none; */
+  }
+}
+
+
+.startScreenAnimation{
+    animation: startScreen 1s ease-in 0s forwards;
+}
+@keyframes startScreen{
+    0%{
+        top: 0;
+
+    }
+    45%{
+        top: 10%;
+
+    }
+    69%{
+        top: 7%;
+        
+    }
+    81%{
+        top: 10%;
+
+    }
+    90%{
+        top: 9%;
+    }
+    100%{
+        top: 10%;
+    }
+}
+
+
+#launcher{
+    position: absolute;
+    bottom: 0px;
+    width: 50px;
+    height: 200px;
+    background: url('rocket.png') no-repeat center center/cover;
+}
+
+.asteroids{
+    width: 90px;
+    height: 100px;
+    position: absolute;
+    background: url('meteor.png') no-repeat center center/cover;
+}
+
+.rocket{
+    position: absolute;
+    width: 50px;
+    height: 200px;
+    z-index: 1;
+    background: url('rocket.png') no-repeat center center/cover;
+
+}
+
+#bg{
+    width: 100vw;
+    height: 100vh;
+    content: "";
+    background: url('bg.jpg') no-repeat center center/cover;
+
+}
+
+#gameSpace{
+    position: absolute;
+    border-left: 4px double white;
+    border-right: 4px double white;
+    left: 25vw;
+    width: 50vw;
+    height: 100vh;
+    background: none;
+    /* background: url('bg.jpg') no-repeat center center/cover; */
+
+}
+
+#fireButton{
+    width: 12%;
+    height: 15%;
+    position: absolute;
+    bottom: 0;
+    z-index: 1;
+    border: 2px dashed white;
+    border-radius: 10px;
+    left: 44%;
+    background: url('button.png') no-repeat center center/cover;
+}
+
+#fireButton:hover{
+    background-color: rgba(168, 168, 168, 0.637);
+    animation: button .3s ease-in-out 0s 1 alternate-reverse ;
+}
+
+#fireButton:active{
+    background-color: rgb(255, 0, 0);
+
+    transform: scale(.9,.9);
+    transition-duration: .1s;
+}
+
+
+@keyframes button{
+    0%{
+        transform: scale(1.1,1.1);
+
+    }
+    25%{
+        transform: scale(1.2,1.2);
+
+    }
+    50%{
+        transform: scale(1.2,1.2);
+        
+    }
+    75%{
+        transform: scale(1.2,1.2);
+
+    }
+    100%{
+        transform: scale(1.1,1.1);
+    }
+}
+
+#score{
+    width: 200px;
+    height: 100px;
+    position: absolute;
+    top: 5vh;
+    left: 5vw;
+    border-radius: 12px;
+    background: none;
+    color: white;
+    box-shadow: white 0px 0px 16px 5px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 3;
+}
+#missed{
+    width: 200px;
+    height: 100px;
+    position: absolute;
+    top: 45vh;
+    left: 5vw;
+    border-radius: 12px;
+    background: none;
+    color: white;
+    box-shadow: white 0px 0px 16px 5px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 3;
+}
+
+#bgm{
+    background: none;
+    border: 2px solid white;
+    position: absolute;
+    top: 85vh;
+    left: 5vw;
+    cursor: pointer;
+    font-size: 1.4rem;
+    font-weight: bold;
+    height: 40px;
+    width: 40px;
+    border-radius: 20px;
+    border: 2px solid white;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 3;
+}

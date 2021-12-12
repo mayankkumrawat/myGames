@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="mobile.css" media="only screen and (max-width:810px)">
+    <script src="https://kit.fontawesome.com/2bdfa1f439.js" crossorigin="anonymous"></script>
+    <title>Games/Meteorite hunter</title>
+</head>
+<body>
+    <div id="bg">
+        <div id="gameSpace">
+        </div>
+        <div id="startScreen">
+            Press Here to start the game <br>
+            Use arrow keys or touch the screen to control the launcher 
+        </div>
+        <div id="score"></div>
+        <div id="missed"></div>
+        <button id="bgm"><i class="fas fa-music"></i></button>
+        <button id="pause" class="hide">Pause</button>
+        <div id="controlBox" class="hide">
+             <div id="control">
+                <button id="right"></button>
+                <button id="left"></button>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    if (screen && screen.width <= 810 || screen.availWidth <= 810){
+        document.write('<script src="mobile.js"><\/script>');
+    }else{ 
+        document.write('<script src="desktop.js"><\/script>');
+    }
+</script>
+</html>
